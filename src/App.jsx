@@ -1,29 +1,22 @@
 import React, { useState, useEffect } from "react";
-import LoadingScreen from "./components/LoadingScreen";
+import { useNavigate } from "react-router-dom";
+import TetrominoLoader from "./components/Tetromino";
+import Home from "./components/Home";
 
-const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+function App() {
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000); // Show loading for 2 seconds
+      setLoading(false);
+      navigate("/home");
+    }, 4000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [navigate]);
 
-  return (
-    <>
-      {isLoading ? (
-        <LoadingScreen />
-      ) : (
-        <div className="main-content">
-          <h1>Welcome to My App 🚀</h1>
-          <p>Your main content appears here!</p>
-        </div>
-      )}
-    </>
-  );
-};
+  return <>{loading ? <TetrominoLoader /> : <Home />}</>;
+}
 
 export default App;
