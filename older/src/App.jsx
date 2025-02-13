@@ -16,7 +16,8 @@ function App() {
     return () => clearTimeout(timer);
   }, [navigate]);
 
-  return <>{loading ? <TetrominoLoader /> : <Home />}</>;
+  return <>
+  {loading ? <TetrominoLoader /> : <Home />}</>;
 }
 
 export default App;

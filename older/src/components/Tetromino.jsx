@@ -1,5 +1,5 @@
 import React from "react";
-import "./Tetromino.css"; // Import CSS for animation
+import "./Tetromino.css"; 
 
 const Tetromino = () => {
 return (

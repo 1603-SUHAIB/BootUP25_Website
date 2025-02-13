@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import videoBg from "../assets/video.mp4";
+import NavBar from "./NavBar/NavBar";
 
 const Home = () => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -22,6 +23,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      <NavBar />
       {/* Video Background Section */}
       <section className="video-section">
         <video autoPlay loop muted className="background-video">

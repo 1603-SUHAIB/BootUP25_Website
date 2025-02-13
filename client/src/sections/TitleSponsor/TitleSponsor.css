@@ -1,0 +1,9 @@
+.title-sponsor {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 4rem 2rem;
+  }
+  
+  .sponsor-logo img {
+    width: 150px;
+    height: auto;
+  }

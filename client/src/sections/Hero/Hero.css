@@ -1,0 +1,37 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1; 
+}
+
+.hero h1 {
+  font-size: clamp(6rem, 8vw + 1rem, 14rem);
+  font-family: "Geist", sans-serif;
+  font-weight: 140;
+  color: hsl(269, 53%, 38%);
+  mix-blend-mode: soft-light;
+  filter: drop-shadow(0 0 2px white);
+  text-shadow: 2px 2px white;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.hero button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background: #8857f1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
