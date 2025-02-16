@@ -1,0 +1,24 @@
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #d800ff, transparent);
+    border: 2.5px solid #d800ff;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: transform 0.08s ease-out;
+    transform: translate(-50%, -50%) scale(1);
+    animation: cursorGlow 1.5s infinite alternate;
+    z-index: 1000;
+  }
+  
+  @keyframes cursorGlow {
+    0% {
+      box-shadow: 0 0 5px #d800ff, 0 0 10px rgba(187, 0, 255, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 10px #d800ff, 0 0 20px rgba(187, 0, 255, 0.5);
+    }
+  }
+  
