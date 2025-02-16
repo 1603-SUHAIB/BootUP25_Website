@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import BIRDS from "vanta/dist/vanta.net.min";
+import BIRDS from "vanta/dist/vanta.birds.min";
 import './vanta.css'
 
 const Vanta = () => {
@@ -7,17 +7,21 @@ const Vanta = () => {
     BIRDS({
         el:'#vanta',
         mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0xe73fff,
-        backgroundColor: 0x0,
-        points: 8.00,
-        maxDistance: 24.00,
-        spacing: 16.00
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x0,
+  color1: 0xd800ff,
+  color2: 0xf4f4f4,
+  colorMode: "lerp",
+  speedLimit: 4.00,
+  separation: 100.00,
+  alignment: 27.00,
+  cohesion: 44.00,
+  quantity: 4.00
     })
  },[])
  return(
