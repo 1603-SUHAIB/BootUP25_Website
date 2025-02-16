@@ -8,7 +8,7 @@ const Memories = () => {
   ];
 
   return (
-    <section className="memories">
+    <section className="memories" style={{ position: 'relative', zIndex: 10 }}>
       <h2>Memories</h2>
       <div className="memory-grid">
         {memories.map((memory) => (

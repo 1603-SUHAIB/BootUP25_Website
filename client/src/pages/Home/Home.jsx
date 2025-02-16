@@ -1,4 +1,4 @@
-import Bg from "../../components/Background/Bg";
+import Bg from "../../components/Background/VantaBg";
 import NavBar from "../../components/NavBar/NavBar";
 import Hero from "../../sections/Hero/Hero";
 import Technical from "../../sections/Technical/Technical";
@@ -14,7 +14,9 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="home">
-      <Bg />
+      <div className="bg">
+        <Bg />
+      </div>
       <NavBar />
       <section id="home">
         <Hero />

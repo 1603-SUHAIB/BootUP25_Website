@@ -1,4 +1,11 @@
 .non-technical {
-  background: rgba(0, 0, 0, 0.2);
+  background: none;
   padding: 4rem 2rem;
+}
+.non-technical-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
 }

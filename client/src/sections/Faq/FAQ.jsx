@@ -7,7 +7,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="faq">
+    <section className="faq" style={{ position: 'relative', zIndex: 10 }}>
       <h2>FAQ</h2>
       <div className="faq-list">
         {faqs.map((faq) => (

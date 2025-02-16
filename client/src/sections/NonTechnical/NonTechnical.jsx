@@ -8,8 +8,8 @@ const NonTechnical = () => {
   ];
 
   return (
-    <section className="non-technical">
-      <h2>Non-Technical Events</h2>
+    <section className="non-technical" style={{ position: 'relative', zIndex: 10 }}>
+      <h2 className='non-technical-heading'>Non-Technical Events</h2>
       <Cards data={events} />
     </section>
   );

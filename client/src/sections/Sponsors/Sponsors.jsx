@@ -14,7 +14,7 @@ const Sponsors = () => {
   ];
 
   return (
-    <section className="sponsors">
+    <section className="sponsors" style={{ position: 'relative', zIndex: 10 }}>
       <h2>Our Sponsors</h2>
       <div className="sponsor-marquee">
         <div className="sponsor-list">

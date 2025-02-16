@@ -7,7 +7,7 @@ const Coordinators = () => {
   ];
 
   return (
-    <section className="coordinators">
+    <section className="coordinators" style={{ position: 'relative', zIndex: 10 }}>
       <h2>Coordinators</h2>
       <div className="coordinator-list">
         {coordinators.map((coordinator) => (

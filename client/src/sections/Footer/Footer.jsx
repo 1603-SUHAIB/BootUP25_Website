@@ -2,7 +2,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{ position: 'relative', zIndex: 10 }}>
       <p>Footer</p>
     </footer>
   );

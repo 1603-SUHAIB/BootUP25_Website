@@ -8,8 +8,8 @@ const Technical = () => {
   ];
 
   return (
-    <section className="technical">
-      <h2>Technical Events</h2>
+    <section className="technical" style={{ position: 'relative', zIndex: 10 }}>
+      <h2 className="technical-heading">Technical Events</h2>
       <Cards data={events} />
     </section>
   );

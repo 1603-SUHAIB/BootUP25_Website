@@ -7,9 +7,10 @@ const Cards = ({ data }) => {
       <div className="cards">
         {data.map((item) => (
           <div key={item.id} className="card">
-            <p className="heading">{item.name}</p>
-            <p>Powered By</p>
-            <p>Uiverse</p>
+            <div className="card-content">
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -22,70 +23,57 @@ const StyledWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
   }
-  
 
   .card {
     position: relative;
     width: 190px;
     height: 254px;
-    background-color: #000;
+    background: linear-gradient(137deg, rgb(255, 0, 179) 0%, rgba(0,212,255,1) 100%);
+    transition: 0.3s ease;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 30px rgba(209, 38, 197, 0.5));
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding: 12px;
-    gap: 12px;
-    border-radius: 8px;
-    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    overflow: hidden; /* Ensure content fits inside */
   }
 
-  .card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    left: -5px;
-    margin: auto;
-    width: 200px;
-    height: 264px;
-    border-radius: 10px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
-    z-index: -10;
-    pointer-events: none;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
+  /* Fix: Reduce opacity so text is visible */
   .card::after {
-    content: "";
-    z-index: -1;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust transparency */
     position: absolute;
-    inset: 0;
-    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
-    transform: translate3d(0, 0, 0) scale(0.95);
-    filter: blur(20px);
+    z-index: 1;
+    transition: 0.3s ease;
+    height: 98%;
+    width: 98%;
+    top: 1%;
+    left: 1%;
+    border-radius: 28px;
   }
 
-  .heading {
-    font-size: 20px;
-    text-transform: capitalize;
-    font-weight: 700;
+  .card-content {
+    position: relative;
+    z-index: 2;
+    color: white;
   }
 
-  .card p:not(.heading) {
+  .card:hover {
+    filter: drop-shadow(0px 0px 30px rgba(209, 38, 197, 1));
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  p {
     font-size: 14px;
   }
-
-  .card p:last-child {
-    color: #e81cff;
-    font-weight: 600;
-  }
-
-  .card:hover::after {
-    filter: blur(30px);
-  }
-
-  .card:hover::before {
-  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
-}
 `;
 
 export default Cards;
