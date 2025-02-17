@@ -1,0 +1,113 @@
+:root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .carousel-container {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    z-index: -1;
+  }
+  
+  .card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+  }
+  
+  /* Fix Cover Image Size */
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover;  /* Ensures it fills the card while maintaining aspect ratio */
+    border-radius: 10px;
+  }
+  
+  /* Fix Wrapper */
+  .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    height: 85%;
+    z-index: -1;
+  }
+  
+  .card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+  
+  /* Character Image Fixed */
+  .character {
+    width: 80%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 90%; /* Prevents overflow */
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: -1;
+  }
+  
+  .card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+  
+  /* Fix Title */
+  .title {
+    width: 80%;
+    transition: transform 0.5s;
+  }
+  
+  .card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+  }
+  
+  .custom-arrow:hover {
+    background: rgba(191, 0, 255, 0.7);
+    box-shadow: 0 0 15px rgba(255, 0, 100, 0.8);
+  }
+  
+  .next {
+    right: -50px;
+  }
+  
+  .prev {
+    left: -50px;
+  }
+  
+  @media (max-width: 1024px) {
+    .next {
+      right: -20px;
+    }
+  
+    .prev {
+      left: -20px;
+    }
+  }
+  
